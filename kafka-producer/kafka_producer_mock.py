@@ -29,9 +29,7 @@ while True:
             for index, row in csv_data.iterrows():
                 message=row[column_names_list[0]]
                 for column_name in column_names_list[1:]:
-                    #print(column_name,row[column_name])
                     message+=",%s:%s"%(str(column_name),str(row[column_name]))
-                print(message)    
                 future = producer.send('test', str.encode(message))
                 record_metadata = future.get(timeout=1)
                 time.sleep(1)
