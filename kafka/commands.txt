@@ -1,8 +1,0 @@
-#create topic
-docker exec kafka_kafka_1 kafka-topics --create --zookeeper kafka_zk1_1:2181 --replication-factor 1 --partitions 1 --topic test
-
-#check the created topic
-docker exec kafka_kafka_1 kafka-topics --describe --topic test --zookeeper kafka_zk1_1:2181
-
-#console consumer
-docker exec kafka_kafka_1 kafka-console-consumer --zookeeper kafka_zk1_1:2181 --topic test --from-beginning
