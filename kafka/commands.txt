@@ -1,7 +1,6 @@
 #create topic
-docker exec singlenodekafkazk_kafka_1 kafka-topics --create --zookeeper singlenodekafkazk_zk1_1:2181 --replication-factor 1 --partitions 1 --topic test
+docker exec kafka_kafka_1 kafka-topics --create --zookeeper kafka_zk1_1:2181 --replication-factor 1 --partitions 1 --topic test
 
 #check the created topic
-docker exec singlenodekafkazk_kafka_1 kafka-topics --describe --topic test --zookeeper singlenodekafkazk_zk1_1:2181
-
+docker exec kafka_kafka_1 kafka-topics --describe --topic test --zookeeper kafka_zk1_1:2181
 
