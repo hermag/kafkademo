@@ -48,7 +48,7 @@ services:
         - 9092:9092
     depends_on:
       - zk1    
-    restart: always
+    #restart: always
 
 networks:
     kafka-net:
