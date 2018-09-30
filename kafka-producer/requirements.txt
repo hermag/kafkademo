@@ -1,0 +1,7 @@
+glob2
+numpy
+pandas
+datetime
+backports.shutil-get-terminal-size
+pykafka
+kafka-python
